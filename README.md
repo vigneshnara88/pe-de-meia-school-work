@@ -4,6 +4,20 @@ Research design and data preparation for studying how Brazil’s Pé-de-Meia pro
 
 The central question is whether increased schooling comes from leaving work, reducing hours, combining school and work, changing employment formality, or returning to school from neither activity. The implementation turns these channels into a common sample, outcome definitions, weighted descriptive tables and difference-in-differences design terms.
 
+## Motivation: what changes when staying in school pays?
+
+A payment intended to support continued schooling can change several decisions at once. An adolescent may stop working, reduce hours, keep a job while attending school, or return to school after being outside both education and employment. Looking only at school attendance would miss these differences, even though they matter for household resources and the opportunity cost of studying.
+
+This proposal therefore treats schooling and work as a joint allocation of time. Its question is not only whether attendance rises, but **which schooling–work combinations become more or less common, and whether the response varies with the earnings available outside school**. An incentive of the same monetary value could represent a larger share of forgone earnings in one labour market than another. That motivates the comparison between the payment and pre-policy youth earnings.
+
+## Design in plain language
+
+The proposed baseline compares changes over time for lower-income adolescents classified as likely eligible with changes for adolescents in a nearby, higher-income comparison band. Difference-in-differences asks whether the gap between these groups changes after the relevant programme date. State-by-quarter and age-by-quarter effects are intended to account for local shocks and age-specific changes shared by the income groups. Calendar-quarter interactions prepare an event study so a later analysis can examine how those gaps evolve before and after the policy.
+
+Two sample choices follow directly from the research question. First, school attendance is an outcome, so the sample includes adolescents regardless of whether they currently attend school. Restricting it to enrolled students would remove the return-to-school margin. Second, the preferred income measure excludes the focal adolescent's earnings: otherwise, working more could itself move someone across the income classification used to compare labour outcomes.
+
+The survey income measure is a proxy for eligibility, not a record of registration or payment. A fitted design would consequently target differences associated with predicted eligibility rather than the effect of actually receiving a payment. The code currently prepares that design and its descriptive inputs; it does not estimate a completed programme effect or identify individual transitions between activity states.
+
 ## What the code does
 
 - Builds an age-and-income sample without selecting on current school attendance.
